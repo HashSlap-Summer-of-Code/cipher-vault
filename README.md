@@ -1,5 +1,5 @@
 
-# 🔐 cipher-vault — Classical & Modern Ciphers 
+# 🔐 cipher-vault - Classic Cipher algorithms
 
 <p align="center">
   <img src="https://img.shields.io/github/license/HashSlap-Summer-of-Code/cipher-vault?style=flat-square&color=brightgreen" alt="License"/>
