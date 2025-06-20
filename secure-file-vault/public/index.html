@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔒 Secure File Vault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 Secure File Vault</h1>
+            <div class="user-info">
+                <span id="username"></span>
+                <button onclick="logout()" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <h2>📤 Upload File</h2>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="fileInput" name="file" required>
+                        <label for="fileInput" class="file-label">
+                            <span>Choose File</span>
+                            <small>Max 10MB • PDF, Images, Documents, ZIP</small>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">🔐 Encrypt & Upload</button>
+                </form>
+                <div id="uploadStatus" class="status"></div>
+            </section>
+
+            <!-- Files List Section -->
+            <section class="files-section">
+                <h2>📁 Your Files</h2>
+                <div id="filesList" class="files-list">
+                    <div class="loading">Loading files...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
