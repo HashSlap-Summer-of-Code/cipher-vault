@@ -86,4 +86,9 @@ This project is licensed under the [MIT License](LICENSE).
   </a>
 </p>
 
+
+## 🔠 Ciphers
+
+- **[Caesar Cipher](ciphers/caesar.py)**: A simple classical cipher that shifts letters by a fixed number in the alphabet.
+
 ---
