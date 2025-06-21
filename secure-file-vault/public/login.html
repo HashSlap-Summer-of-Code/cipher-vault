@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔒 Secure File Vault - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>🔒 Secure File Vault</h1>
+            <p>Enter your credentials to access your encrypted files</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            
+            <div id="loginStatus" class="status"></div>
+            
+            <div class="demo-credentials">
+                <h3>Demo Credentials:</h3>
+                <p><strong>Admin:</strong> admin / admin123</p>
+                <p><strong>User:</strong> user / user123</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const credentials = Object.fromEntries(formData);
+            
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(credentials)
+                });
+                
+                const result = await response.json();
+                const status = document.getElementById('loginStatus');
+                
+                if (response.ok) {
+                    status.textContent = 'Login successful! Redirecting...';
+                    status.className = 'status success';
+                    setTimeout(() => window.location.href = '/', 1000);
+                } else {
+                    status.textContent = result.error;
+                    status.className = 'status error';
+                }
+            } catch (error) {
+                document.getElementById('loginStatus').textContent = 'Login failed';
+                document.getElementById('loginStatus').className = 'status error';
+            }
+        });
+    </script>
+</body>
+</html>
