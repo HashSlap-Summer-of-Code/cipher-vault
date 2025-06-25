@@ -1,4 +1,3 @@
-
 # 🔐 cipher-vault - Classic Cipher algorithms
 
 <p align="center">
@@ -66,7 +65,7 @@ Perfect for:
 * 📝 Add a short description as comments in your script
 * ✅ Make sure your code is clean and well-documented
 * 🧪 Include a test input/output in your script if possible
-* 💬 Open an issue if you're unsure — we’re happy to help!
+* 💬 Open an issue if you're unsure — we're happy to help!
 
 ---
 
@@ -90,5 +89,11 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🔠 Ciphers
 
 - **[Caesar Cipher](ciphers/caesar.py)**: A simple classical cipher that shifts letters by a fixed number in the alphabet.
+
+## Caesar Cipher Visualizer
+
+Test the Caesar cipher in your browser: [Open Visualizer](web/index.html)
+
+This tool lets you enter plaintext and a shift value to see the encrypted result instantly.
 
 ---

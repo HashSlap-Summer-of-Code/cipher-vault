@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Visualizer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+        .container { max-width: 400px; margin: auto; background: #fff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+        label { display: block; margin-top: 1em; }
+        input[type="text"], input[type="number"] { width: 100%; padding: 0.5em; margin-top: 0.5em; }
+        button { margin-top: 1.5em; padding: 0.7em 1.5em; font-size: 1em; border: none; background: #007bff; color: #fff; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        #result { margin-top: 2em; font-size: 1.2em; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Caesar Cipher Visualizer</h2>
+        <label for="plaintext">Plaintext:</label>
+        <input type="text" id="plaintext" placeholder="Enter text to encrypt">
+        <label for="shift">Shift value:</label>
+        <input type="number" id="shift" value="3" min="0" max="25">
+        <button onclick="encrypt()">Encrypt</button>
+        <div id="result"></div>
+    </div>
+    <script src="cipher.js"></script>
+</body>
+</html>
