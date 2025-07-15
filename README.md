@@ -40,6 +40,8 @@ Perfect for:
 │   ├── md5.py
 │   ├── sha256.py
 │   └── hmac.py
+├── js-ciphers/
+│   └── vigenere.js
 └── README.md
 ```
 
@@ -89,6 +91,8 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🔠 Ciphers
 
 - **[Caesar Cipher](ciphers/caesar.py)**: A simple classical cipher that shifts letters by a fixed number in the alphabet.
+- **[Vigenère Cipher](js-ciphers/vigenere.js)**:  A key‑based polyalphabetic substitution cipher; exposes encrypt(text, key) and decrypt(cipher, key).
+
 
 ## Caesar Cipher Visualizer
 
