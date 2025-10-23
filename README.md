@@ -1,11 +1,11 @@
 # 🔐 cipher-vault - Classic Cipher algorithms
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/HashSlap-Summer-of-Code/cipher-vault?style=flat-square&color=brightgreen" alt="License"/>
-  <img src="https://img.shields.io/github/forks/HashSlap-Summer-of-Code/cipher-vault?style=flat-square&color=gray" alt="Forks"/>
-  <img src="https://img.shields.io/github/stars/HashSlap-Summer-of-Code/cipher-vault?style=flat-square&color=blue" alt="Stars"/>
-  <img src="https://img.shields.io/github/issues/HashSlap-Summer-of-Code/cipher-vault?style=flat-square&color=green" alt="Open Issues"/>
-  <img src="https://img.shields.io/github/issues-pr/HashSlap-Summer-of-Code/cipher-vault?style=flat-square&color=gold" alt="Open PRs"/>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <img alt="Forks" src="https://img.shields.io/github/forks/HashSlap-Summer-of-Code/cipher-vault?style=social">
+  <img alt="Stars" src="https://img.shields.io/github/stars/HashSlap-Summer-of-Code/cipher-vault?style=social">
+  <img alt="Open Issues" src="https://img.shields.io/github/issues/HashSlap-Summer-of-Code/cipher-vault">
+  <img alt="Open PRs" src="https://img.shields.io/github/issues-pr/HashSlap-Summer-of-Code/cipher-vault">
 </p>
 
 ---
@@ -14,7 +14,6 @@
 From classical ciphers like **Caesar**, **Vigenère**, and **Hill**, to modern ones like **AES**, **Base64**, and **XOR** — this repo is a one-stop resource for learning and contributing to cryptography.
 
 Perfect for:
-
 * 🧠 Students and educators exploring cryptography fundamentals
 * 🧑‍💻 Beginners looking for open-source contribution ideas
 * 🔐 Security enthusiasts brushing up on classical techniques
@@ -51,7 +50,6 @@ Perfect for:
 
 1. **Fork** this repository 🍴
 2. Clone it to your local system:
-
    ```bash
    git clone https://github.com/your-username/cryptovault.git
    cd cryptovault
@@ -71,6 +69,17 @@ Perfect for:
 
 ---
 
+## 📚 Learning Resources
+
+* **[CryptoBasics.java](docs/CryptoBasics.java)**: Comprehensive educational documentation covering fundamental cryptography concepts including:
+  - Symmetric vs Asymmetric encryption
+  - Substitution vs Transposition ciphers
+  - One-time pads and their theoretical security
+  - Stream vs Block ciphers with examples
+  - Practical demonstrations and cryptography glossary
+
+---
+
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -80,24 +89,21 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🌟 Made with 💻 & 🔐 by
 
 <p align="center">
-  <b>HashSlap Summer of Code (HSSoC)</b> 🚀  
+  <b>HashSlap Summer of Code (HSSoC)</b> 🚀
   <br>
   <a href="https://github.com/HashSlap-Summer-of-Code" target="_blank">
     https://github.com/HashSlap-Summer-of-Code
   </a>
 </p>
 
-
 ## 🔠 Ciphers
 
 - **[Caesar Cipher](ciphers/caesar.py)**: A simple classical cipher that shifts letters by a fixed number in the alphabet.
 - **[Vigenère Cipher](js-ciphers/vigenere.js)**:  A key‑based polyalphabetic substitution cipher; exposes encrypt(text, key) and decrypt(cipher, key).
 
-
 ## Caesar Cipher Visualizer
 
 Test the Caesar cipher in your browser: [Open Visualizer](web/index.html)
-
 This tool lets you enter plaintext and a shift value to see the encrypted result instantly.
 
 ---
