@@ -1,11 +1,11 @@
 # 🔐 cipher-vault - Classic Cipher algorithms
 
 <p align="center">
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg">
-  <img alt="Forks" src="https://img.shields.io/github/forks/HashSlap-Summer-of-Code/cipher-vault?style=social">
-  <img alt="Stars" src="https://img.shields.io/github/stars/HashSlap-Summer-of-Code/cipher-vault?style=social">
-  <img alt="Open Issues" src="https://img.shields.io/github/issues/HashSlap-Summer-of-Code/cipher-vault">
-  <img alt="Open PRs" src="https://img.shields.io/github/issues-pr/HashSlap-Summer-of-Code/cipher-vault">
+  <img alt="License"/>
+  <img alt="Forks"/>
+  <img alt="Stars"/>
+  <img alt="Open Issues"/>
+  <img alt="Open PRs"/>
 </p>
 
 ---
@@ -51,59 +51,122 @@ Perfect for:
 1. **Fork** this repository 🍴
 2. Clone it to your local system:
    ```bash
-   git clone https://github.com/your-username/cryptovault.git
-   cd cryptovault
+   git clone https://github.com/your-username/cipher-vault.git
+   cd cipher-vault
    ```
-3. Explore the folders and run any cipher script!
-4. Want to contribute? Check out [Issues](https://github.com/HashSlap-Summer-of-Code/cryptovault/issues)
+3. Install dependencies (if required):
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ---
 
-## 🤝 Contribution Guidelines
+## 📦 AES Encryption Module
 
-* 📂 Place your cipher in the correct folder (`classical/`, `modern/`, or `hash/`)
-* 📝 Add a short description as comments in your script
-* ✅ Make sure your code is clean and well-documented
-* 🧪 Include a test input/output in your script if possible
-* 💬 Open an issue if you're unsure — we're happy to help!
+The **AES Encryption Module** (`ciphers/aes_encryption.py`) provides secure AES-256 encryption and decryption with support for both text and file encryption.
+
+### ⚙️ Setup Instructions
+
+Install the required dependency:
+
+```bash
+pip install pycryptodome
+```
+
+### 🔧 How to Run
+
+#### Interactive Test Mode (No Arguments)
+
+Run the script without arguments to see example usage:
+
+```bash
+python ciphers/aes_encryption.py
+```
+
+This will demonstrate:
+- Key generation
+- Text encryption/decryption
+- File encryption/decryption
+- Automatic verification of results
+
+#### CLI Mode - Text Encryption
+
+Encrypt text with a generated key:
+
+```bash
+python ciphers/aes_encryption.py --mode text
+```
+
+Encrypt text with a custom key:
+
+```bash
+python ciphers/aes_encryption.py --mode text --key "your-base64-encoded-key"
+```
+
+#### CLI Mode - File Encryption
+
+Encrypt a .txt file:
+
+```bash
+python ciphers/aes_encryption.py --mode file --input input.txt --output encrypted.bin
+```
+
+This will output:
+- The encrypted file
+- The encryption key (Base64)
+- The initialization vector/IV (Base64)
+
+**Important**: Save the key and IV - you'll need them to decrypt!
+
+#### CLI Mode - File Decryption
+
+Decrypt an encrypted file:
+
+```bash
+python ciphers/aes_encryption.py --mode decrypt --input encrypted.bin --output decrypted.txt --key "your-key" --iv "your-iv"
+```
+
+### ✨ Features
+
+- ✅ **Secure Key Generation**: 256-bit (32-byte) keys using cryptographically secure random number generation
+- ✅ **AES-256 CBC Mode**: Industry-standard encryption with proper padding
+- ✅ **Text Encryption**: Encrypt and decrypt plain text strings
+- ✅ **File Encryption**: Encrypt and decrypt .txt files
+- ✅ **CLI Interface**: Command-line interface using argparse for easy usage
+- ✅ **Base64 Encoding**: All keys, IVs, and ciphertext are Base64 encoded for easy storage
+- ✅ **Test Mode**: Built-in examples and verification
+
+### 📝 Example Usage
+
+```python
+from ciphers.aes_encryption import generate_key, encrypt, decrypt
+
+# Generate a secure key
+key = generate_key()
+
+# Encrypt text
+plain_text = "Hello, World!"
+ciphertext, iv = encrypt(plain_text, key)
+
+# Decrypt text
+decrypted = decrypt(ciphertext, key, iv)
+print(decrypted)  # Output: Hello, World!
+```
 
 ---
 
-## 📚 Learning Resources
+## 🤝 Contributing
 
-* **[CryptoBasics.java](docs/CryptoBasics.java)**: Comprehensive educational documentation covering fundamental cryptography concepts including:
-  - Symmetric vs Asymmetric encryption
-  - Substitution vs Transposition ciphers
-  - One-time pads and their theoretical security
-  - Stream vs Block ciphers with examples
-  - Practical demonstrations and cryptography glossary
+We welcome contributions! Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-## 📜 License
+## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 🌟 Made with 💻 & 🔐 by
-
-<p align="center">
-  <b>HashSlap Summer of Code (HSSoC)</b> 🚀
-  <br>
-  <a href="https://github.com/HashSlap-Summer-of-Code" target="_blank">
-    https://github.com/HashSlap-Summer-of-Code
-  </a>
-</p>
-
-## 🔠 Ciphers
-
-- **[Caesar Cipher](ciphers/caesar.py)**: A simple classical cipher that shifts letters by a fixed number in the alphabet.
-- **[Vigenère Cipher](js-ciphers/vigenere.js)**:  A key‑based polyalphabetic substitution cipher; exposes encrypt(text, key) and decrypt(cipher, key).
-
-## Caesar Cipher Visualizer
-
-Test the Caesar cipher in your browser: [Open Visualizer](web/index.html)
-This tool lets you enter plaintext and a shift value to see the encrypted result instantly.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+## 🌟 Show Your Support
+
+Give us a ⭐ if you found this helpful!
