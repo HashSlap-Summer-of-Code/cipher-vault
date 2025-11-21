@@ -57,8 +57,8 @@ Perfect for:
 │   ├── caesar.py
 │   ├── hill.py
 │   ├── vigenere.py
-  ├── playfair.py
-  └── affine.py
+│   ├── playfair.py
+│   └── affine.py
 ├── modern/
 │   ├── xor_cipher.py
 │   ├── aes.py
