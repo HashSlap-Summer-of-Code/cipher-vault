@@ -37,10 +37,6 @@ function transform(text, key, direction) {
 export const encrypt = (text, key) => transform(text, key, +1);
 export const decrypt = (text, key) => transform(text, key, -1);
 
-// Extended test cases
-if (import.meta.main) {
-  console.log(encrypt("AttackAtDawn!", "KeY"));
-  // → "KfAnVfKTvIhq!"
-  console.log(decrypt("KfAnVfKTvIhq!", "KeY"));
-  // → "AttackAtDawn!"
-}
+// Note: this file is ESM and exports `encrypt` and `decrypt`.
+// Example usage is provided in `js-ciphers/test.js` so this file
+// remains a pure module that can be imported by other Node projects.

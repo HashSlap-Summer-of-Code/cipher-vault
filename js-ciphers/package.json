@@ -1,0 +1,10 @@
+{
+  "name": "js-ciphers",
+  "version": "0.1.0",
+  "description": "Collection of small JavaScript cipher utilities (Vigenère)",
+  "main": "vigenere.js",
+  "type": "module",
+  "keywords": ["cipher", "vigenère", "cryptography", "ciphers"],
+  "author": "immortal71",
+  "license": "MIT"
+}

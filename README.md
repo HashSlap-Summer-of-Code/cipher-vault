@@ -1,4 +1,4 @@
-# 🔐 cipher-vault - Classic Cipher algorithms
+#  cipher-vault - Classic Cipher algorithms
 
 <p align="center">
   <img alt="License"/>
@@ -14,13 +14,42 @@
 From classical ciphers like **Caesar**, **Vigenère**, and **Hill**, to modern ones like **AES**, **Base64**, and **XOR** — this repo is a one-stop resource for learning and contributing to cryptography.
 
 Perfect for:
-* 🧠 Students and educators exploring cryptography fundamentals
-* 🧑‍💻 Beginners looking for open-source contribution ideas
-* 🔐 Security enthusiasts brushing up on classical techniques
+*  Students and educators exploring cryptography fundamentals
+*  Beginners looking for open-source contribution ideas
+*  Security enthusiasts brushing up on classical techniques
 
 ---
 
-## 🧰 What's Inside?
+##  What's Inside?
+
+```bash
+.
+├── classical/
+│   ├── caesar.py
+│   ├── hill.py
+# cipher-vault - Classic Cipher algorithms
+
+<p align="center">
+  <img alt="License"/>
+  <img alt="Forks"/>
+  <img alt="Stars"/>
+  <img alt="Open Issues"/>
+  <img alt="Open PRs"/>
+</p>
+
+---
+
+**CryptoVault** is an open-source collection of encryption and decryption algorithms in any language.
+From classical ciphers like **Caesar**, **Vigenère**, and **Hill**, to modern ones like **AES**, **Base64**, and **XOR** — this repo is a one-stop resource for learning and contributing to cryptography.
+
+Perfect for:
+* Students and educators exploring cryptography fundamentals
+* Beginners looking for open-source contribution ideas
+* Security enthusiasts brushing up on classical techniques
+
+---
+
+## What's Inside?
 
 ```bash
 .
@@ -46,26 +75,26 @@ Perfect for:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-1. **Fork** this repository 🍴
+1. **Fork** this repository
 2. Clone it to your local system:
-   ```bash
-   git clone https://github.com/your-username/cipher-vault.git
-   cd cipher-vault
-   ```
+  ```bash
+  git clone https://github.com/your-username/cipher-vault.git
+  cd cipher-vault
+  ```
 3. Install dependencies (if required):
-   ```bash
-   pip install -r requirements.txt
-   ```
+  ```bash
+  pip install -r requirements.txt
+  ```
 
 ---
 
-## 📦 AES Encryption Module
+## AES Encryption Module
 
-The **AES Encryption Module** (`ciphers/aes_encryption.py`) provides secure AES-256 encryption and decryption with support for both text and file encryption.
+The AES Encryption Module (`ciphers/aes_encryption.py`) provides secure AES-256 encryption and decryption with support for both text and file encryption.
 
-### ⚙️ Setup Instructions
+### Setup Instructions
 
 Install the required dependency:
 
@@ -73,7 +102,7 @@ Install the required dependency:
 pip install pycryptodome
 ```
 
-### 🔧 How to Run
+### How to Run
 
 #### Interactive Test Mode (No Arguments)
 
@@ -118,7 +147,7 @@ This will output:
 
 **Important**: Save the key and IV - you'll need them to decrypt!
 
-#### CLI Mode - File Decryption
+## CLI Mode - File Decryption
 
 Decrypt an encrypted file:
 
@@ -126,17 +155,17 @@ Decrypt an encrypted file:
 python ciphers/aes_encryption.py --mode decrypt --input encrypted.bin --output decrypted.txt --key "your-key" --iv "your-iv"
 ```
 
-### ✨ Features
+### Features
 
-- ✅ **Secure Key Generation**: 256-bit (32-byte) keys using cryptographically secure random number generation
-- ✅ **AES-256 CBC Mode**: Industry-standard encryption with proper padding
-- ✅ **Text Encryption**: Encrypt and decrypt plain text strings
-- ✅ **File Encryption**: Encrypt and decrypt .txt files
-- ✅ **CLI Interface**: Command-line interface using argparse for easy usage
-- ✅ **Base64 Encoding**: All keys, IVs, and ciphertext are Base64 encoded for easy storage
-- ✅ **Test Mode**: Built-in examples and verification
+- **Secure Key Generation**: 256-bit (32-byte) keys using cryptographically secure random number generation
+- **AES-256 CBC Mode**: Industry-standard encryption with proper padding
+- **Text Encryption**: Encrypt and decrypt plain text strings
+- **File Encryption**: Encrypt and decrypt .txt files
+- **CLI Interface**: Command-line interface using argparse for easy usage
+- **Base64 Encoding**: All keys, IVs, and ciphertext are Base64 encoded for easy storage
+- **Test Mode**: Built-in examples and verification
 
-### 📝 Example Usage
+### Example Usage
 
 ```python
 from ciphers.aes_encryption import generate_key, encrypt, decrypt
@@ -155,18 +184,32 @@ print(decrypted)  # Output: Hello, World!
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🌟 Show Your Support
+## Show Your Support
 
 Give us a ⭐ if you found this helpful!
+
+We welcome contributions! Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+##  License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Show Your Support
+
+Give us a star if you found this helpful!
